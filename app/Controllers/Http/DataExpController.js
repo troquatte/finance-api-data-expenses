@@ -19,7 +19,7 @@ class DataExpController {
                       .where({users_id: users_id})
                       .with('tag');
 
-    //Find Expense and where Tag
+    // //Find Expense and where Tag
     let sumAll = Expense
                       .query()
                       .where({users_id: users_id});
@@ -53,7 +53,6 @@ class DataExpController {
 
     //Payload Response Client
     const payload = {
-      debts: sumAll.sum,
       ...find.pages,
       rows: [
           ...find.rows

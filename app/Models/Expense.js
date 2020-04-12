@@ -5,7 +5,7 @@ const Model = use('Model')
 
 class Expense extends Model {
   static get visible() {
-    return ["id", "description", "value", "period"];
+    return ["id", "description", "value", "period", "type"];
   }
 
   tag(){
